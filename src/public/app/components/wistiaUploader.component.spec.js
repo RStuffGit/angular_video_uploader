@@ -1,6 +1,7 @@
 describe('Component: wistiaUploader', function () {
 
-    beforeEach(module('app', 'ngTemplates'));
+    beforeEach(module('app'));
+    beforeEach(module('ngTemplates'));
     describe('with $compile', function () {
         var scope;
         var element;
@@ -16,6 +17,7 @@ describe('Component: wistiaUploader', function () {
             var fileUploader = element.find('input[type="file"]');
             expect(!!fileUploader.length).toBeTruthy();
         });
+
 // ...so on
     });
 

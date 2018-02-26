@@ -31,7 +31,10 @@ module.exports = function (config) {
             'src/public/app/plugins/jquery.fileupload-video.js',
             'src/public/app/plugins/jquery.fileupload-validate.js',
             'src/public/app/plugins/jquery.fileupload-angular.js',
-            'src/**/*.js',
+            'src/public/app/app.js',
+            'src/public/app/config.js',
+            'src/public/app/services/*.js',
+            'src/public/app/components/*.js',
             'src/public/app/views/*.html'
         ],
 
