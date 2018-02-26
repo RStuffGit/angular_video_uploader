@@ -8,8 +8,7 @@ app.set('view engine', 'html');
 app.use("/node_modules", express.static('node_modules'));
 
 app.get('/', function(request, response)  {
-    response.send("OHOHO");
-    // response.render('index');
+    response.render('index');
 });
 app.use(express.static(__dirname + '/src/public'));
 
