@@ -23,74 +23,9 @@
 <div class="container">
     <h1>Video upload demo</h1>
     <br>
-    <div id="fileupload" data-ng-app="app" data-ng-controller="DemoFileUploadController" data-file-upload="options">
-        <div class="row fileupload-buttonbar">
-            <div class="col-lg-7">
-                <span class="btn btn-success fileinput-button" ng-show="queue.length == 0">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>Choose file...</span>
-                    <input type="file" name="file" id="file2" ng-disabled="disabled">
-                </span>
-            </div>
-        </div>
-        <!-- The table listing the files available for upload/download -->
-        <table class="table table-striped files ng-cloak"  ng-show="queue.length > 0">
-            <tr data-ng-repeat="file in queue" data-ng-class="{'processing': file.$processing()}">
-                <td data-ng-switch data-on="!!file.thumbnailUrl">
-                    <div class="preview" data-ng-switch-when="true">
-                        <a data-ng-href="{{file.url}}" title="{{file.name}}" download="{{file.name}}" data-gallery><img
-                                data-ng-src="{{file.thumbnailUrl}}" alt=""></a>
-                    </div>
-                    <div class="preview" data-ng-switch-default data-file-upload-preview="file"></div>
-                </td>
-                <td>
-                    <p class="name" data-ng-switch data-on="!!file.url">
-                        <span data-ng-switch-when="true" data-ng-switch data-on="!!file.thumbnailUrl">
-                            <a data-ng-switch-when="true" data-ng-href="{{file.url}}" title="{{file.name}}"
-                               download="{{file.name}}" data-gallery>{{file.name}}</a>
-                            <a data-ng-switch-default data-ng-href="{{file.url}}" title="{{file.name}}"
-                               download="{{file.name}}">{{file.name}}</a>
-                        </span>
-                        <span data-ng-switch-default>{{file.name}}</span>
-                    </p>
-                    <strong data-ng-show="file.error" class="error text-danger">{{file.error}}</strong>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary start" data-ng-click="uploadVideo(file)"
-                            data-ng-hide="!file.$submit || options.autoUpload"
-                            data-ng-disabled="file.$state() == 'pending' || file.$state() == 'rejected'">
-                        <i class="glyphicon glyphicon-upload"></i>
-                        <span>Start</span>
-                    </button>
-                    <button type="button" class="btn btn-warning cancel" data-ng-click="file.$cancel()"
-                            data-ng-hide="!file.$cancel">
-                        <i class="glyphicon glyphicon-ban-circle"></i>
-                        <span>Cancel</span>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <div class="progress" ng-show="progress > 0 && queue.length > 0">
-                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
-                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                             ng-style="{width: progress + '%'}">
-                            {{progress}} %
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div class="videos-container">
-            <div ng-repeat="video in videos">
-                <div class="wistia_embed videoFoam=true playerColor=ff0000" ng-class="'wistia_async_' + video"
-                     style="width:640px;height:360px;">&nbsp;
-                </div>
-            </div>
-        </div>
-
+    <div ng-app="app">
+        <wistia-uploader></wistia-uploader>
     </div>
-    <br>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -113,6 +48,7 @@
 <script src="js/app.js"></script>
 <script src="js/config.js"></script>
 <script src="js/services/fileupload.service.js"></script>
+<script src="js/components/wistiaUploader/wistiaUploader.component.js"></script>
 
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>
