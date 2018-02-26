@@ -34,7 +34,7 @@
             require('blueimp-load-image/js/load-image-scale'),
             require('blueimp-load-image/js/load-image-exif'),
             require('blueimp-canvas-to-blob'),
-            require('./jquery.fileupload-process')
+            require('./jquery.fileupload-process.js')
         );
     } else {
         // Browser globals:

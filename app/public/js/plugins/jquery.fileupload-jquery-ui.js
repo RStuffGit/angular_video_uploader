@@ -24,7 +24,7 @@
         // Node/CommonJS:
         factory(
             require('jquery'),
-            require('./jquery.fileupload-ui')
+            require('./jquery.fileupload-ui.js')
         );
     } else {
         // Browser globals:

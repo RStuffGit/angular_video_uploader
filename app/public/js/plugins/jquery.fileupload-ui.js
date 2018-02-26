@@ -29,10 +29,10 @@
         factory(
             require('jquery'),
             require('blueimp-tmpl'),
-            require('./jquery.fileupload-image'),
-            require('./jquery.fileupload-audio'),
-            require('./jquery.fileupload-video'),
-            require('./jquery.fileupload-validate')
+            require('./jquery.fileupload-image.js'),
+            require('./jquery.fileupload-audio.js'),
+            require('./jquery.fileupload-video.js'),
+            require('./jquery.fileupload-validate.js')
         );
     } else {
         // Browser globals:
