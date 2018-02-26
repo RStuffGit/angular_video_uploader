@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+    <noscript>
+        <link rel="stylesheet" href="css/jquery.fileupload-noscript.css">
+    </noscript>
+    <noscript>
+        <link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css">
+    </noscript>
+    <style>
+        /* Hide Angular JS elements before initializing */
+        .ng-cloak {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Video upload demo</h1>
+    <br>
+    <div ng-app="app">
+        <wistia-uploader></wistia-uploader>
+    </div>
+</div>
+
+<script src="app/plugins/jquery.min.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="app/plugins/jquery.ui.widget.js"></script>
+
+<script src="app/plugins/load-image.all.min.js"></script>
+<script src="app/plugins/canvas-to-blob.min.js"></script>
+<script src="app/plugins/bootstrap.min.js"></script>
+<script src="app/plugins/jquery.blueimp-gallery.min.js"></script>
+
+<script src="app/plugins/jquery.iframe-transport.js"></script>
+<script src="app/plugins/jquery.fileupload.js"></script>
+<script src="app/plugins/jquery.fileupload-process.js"></script>
+<script src="app/plugins/jquery.fileupload-image.js"></script>
+<script src="app/plugins/jquery.fileupload-audio.js"></script>
+<script src="app/plugins/jquery.fileupload-video.js"></script>
+<script src="app/plugins/jquery.fileupload-validate.js"></script>
+<script src="app/plugins/jquery.fileupload-angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/services/fileupload.service.js"></script>
+<script src="app/components/wistiaUploader/wistiaUploader.component.js"></script>
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+</body>
+</html>

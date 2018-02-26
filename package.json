@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start --singleRun",
     "start": "node server.js"
   },
   "author": "",
@@ -16,5 +16,14 @@
     "express": "^4.16.2",
     "http": "0.0.0",
     "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.9",
+    "jasmine-core": "^2.99.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
   }
 }
