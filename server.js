@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 80;
+var port = process.env.PORT || 3000;
 
 app.engine('html', require('ejs').renderFile);
 app.set('views', __dirname + '/src'); // general config
