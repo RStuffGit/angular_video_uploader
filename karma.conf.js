@@ -15,9 +15,9 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
+            'src/public/app/plugins/jquery.min.js',
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
-            'src/public/app/plugins/jquery.min.js',
             'src/public/app/plugins/jquery.ui.widget.js',
             'src/public/app/plugins/load-image.all.min.js',
             'src/public/app/plugins/canvas-to-blob.min.js',
@@ -32,29 +32,27 @@ module.exports = function (config) {
             'src/public/app/plugins/jquery.fileupload-validate.js',
             'src/public/app/plugins/jquery.fileupload-angular.js',
             'src/**/*.js',
-            'src/**/*.html'
+            'src/public/app/views/*.html'
         ],
 
 
         // list of files to exclude
         exclude: [
-            'src/public/app/plugins/*.js'
         ],
 
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/**/*.html': ['ng-html2js'],
+            'src/public/**/*.html': ['ng-html2js'],
             'src/**/!(*.mock|*.spec).js': ['coverage']
         },
 
 
         ngHtml2JsPreprocessor: {
-            // strip this from the file path
-            stripPrefix: 'src/',
+            stripPrefix: "src/public",
             // create a single module that contains templates from all the files
-            moduleName: 'templates'
+            moduleName: 'ngTemplates'
         },
 
 

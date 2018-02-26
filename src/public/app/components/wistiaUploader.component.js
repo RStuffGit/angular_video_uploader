@@ -1,5 +1,5 @@
 angular.module('app').component('wistiaUploader', {
-    templateUrl: '/js/components/wistiaUploader/wistiaUploader.template.html',
+    templateUrl: '/app/views/wistiaUploader.template.html',
     controller: [
         '$scope', '$http', '$timeout', 'fileUploadService',
         function ($scope, $http, $timeout, fileUploadService) {
